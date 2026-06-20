@@ -36,7 +36,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          # The new site uses no submodules; the archived old/themes/uBlogger
+          # submodule points at an upstream commit that no longer exists, so
+          # fetching it would break CI. Skip submodules entirely.
+          submodules: false
           fetch-depth: 0
       - name: Setup Pages
         id: pages
