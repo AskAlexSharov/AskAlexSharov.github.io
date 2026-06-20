@@ -1,0 +1,39 @@
+baseURL = "https://askalexsharov.github.io/"
+languageCode = "en-us"
+title = "Alexey Sharov"
+# User site served from the domain root, so no path prefix is needed.
+
+# Generate a clean URL like /posts/hello-world/ instead of .../hello-world.html
+[permalinks]
+  posts = "/posts/:slug/"
+
+# Build a tag taxonomy (categories are disabled by default below).
+[taxonomies]
+  tag = "tags"
+
+paginate = 10
+enableRobotsTXT = true
+
+[params]
+  description = "Notes on databases, storage engines, and systems programming."
+  author = "Alexey Sharov"
+  # Shown in the footer.
+  since = 2026
+
+[markup.highlight]
+  noClasses = false   # emit CSS classes so the stylesheet controls code colors
+  lineNos = false
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    pageRef = "/posts"
+    weight = 10
+  [[menu.main]]
+    name = "Tags"
+    pageRef = "/tags"
+    weight = 20
+  [[menu.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 30
