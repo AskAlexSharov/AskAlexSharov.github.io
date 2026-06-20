@@ -1,0 +1,906 @@
+[
+ {
+  "repo": "erigontech/erigon",
+  "number": 20567,
+  "title": "btindex: WarmUp: read key-only, skip value to avoid unnecessary decompression",
+  "date": "2026-04-15",
+  "score": 10,
+  "url": "https://github.com/erigontech/erigon/pull/20567"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 11696,
+  "title": "enable keys compression for commitment.kv > 64steps",
+  "date": "2024-08-20",
+  "score": 10,
+  "url": "https://github.com/erigontech/erigon/pull/11696"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 17019,
+  "title": "move commitment and changeset db format outside of `db/state` package",
+  "date": "2025-09-05",
+  "score": 9,
+  "url": "https://github.com/erigontech/erigon/pull/17019"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 10004,
+  "title": "Downloader: atomic-fs to be less smart. if app called - Create() - don't check .lock. Otherwise can't create .torrent for existing .seg files.",
+  "date": "2024-04-20",
+  "score": 9,
+  "url": "https://github.com/erigontech/erigon/pull/10004"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 6348,
+  "title": "StagedSync: break dependency to CurrentHeader. Always run non-initial cycle in 1 RwTx",
+  "date": "2022-12-17",
+  "score": 9,
+  "url": "https://github.com/erigontech/erigon/pull/6348"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 5464,
+  "title": "erigon method to test decompression speed",
+  "date": "2022-09-22",
+  "score": 9,
+  "url": "https://github.com/erigontech/erigon/pull/5464"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3465,
+  "title": "snapshot: parallel transaction index, recsplit: reset offset collector, etl: faster flush and load",
+  "date": "2022-02-10",
+  "score": 9,
+  "url": "https://github.com/erigontech/erigon/pull/3465"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3265,
+  "title": "Snapshots: ParallelCompressor class, DecompressedFile class",
+  "date": "2022-01-15",
+  "score": 9,
+  "url": "https://github.com/erigontech/erigon/pull/3265"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 1433,
+  "title": "lmdb: move fsync inside commit (to avoid start next write transaction before previous fsync finished)",
+  "date": "2021-01-03",
+  "score": 9,
+  "url": "https://github.com/erigontech/erigon/pull/1433"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 16781,
+  "title": "[r31] kv/mdbx: revert nosync periodic flusher",
+  "date": "2025-08-22",
+  "score": 8,
+  "url": "https://github.com/erigontech/erigon/pull/16781"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 8892,
+  "title": "caplin: to use 1 worker for snapshots compression ",
+  "date": "2023-12-04",
+  "score": 8,
+  "url": "https://github.com/erigontech/erigon/pull/8892"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 8853,
+  "title": "e35: by default - minimize background impact: 1 goroutine for collate and build, 1 goroutine for merge, no parallel compression",
+  "date": "2023-11-29",
+  "score": 8,
+  "url": "https://github.com/erigontech/erigon/pull/8853"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 4403,
+  "title": "Snapshots: allow delete .seg files",
+  "date": "2022-06-08",
+  "score": 8,
+  "url": "https://github.com/erigontech/erigon/pull/4403"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3724,
+  "title": "Snapshots: start seed new large .seg files",
+  "date": "2022-03-17",
+  "score": 8,
+  "url": "https://github.com/erigontech/erigon/pull/3724"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3571,
+  "title": "\"erigon snapshots recompress\" to apply new compression rules without db access",
+  "date": "2022-02-22",
+  "score": 8,
+  "url": "https://github.com/erigontech/erigon/pull/3571"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3445,
+  "title": "snapshots: funcs to fast decompress all segments",
+  "date": "2022-02-08",
+  "score": 8,
+  "url": "https://github.com/erigontech/erigon/pull/3445"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3427,
+  "title": "ParallelCompressor: Remove intermediate ETL collectors ",
+  "date": "2022-02-04",
+  "score": 8,
+  "url": "https://github.com/erigontech/erigon/pull/3427"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3223,
+  "title": "Snapshots: create .seg and huffman_codes.txt in tmpdir",
+  "date": "2022-01-09",
+  "score": 8,
+  "url": "https://github.com/erigontech/erigon/pull/3223"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3211,
+  "title": "Snapshot: move parallel compression to erigon-lib",
+  "date": "2022-01-06",
+  "score": 8,
+  "url": "https://github.com/erigontech/erigon/pull/3211"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3140,
+  "title": "add words count in .seg (breaking change in snapshot format)",
+  "date": "2021-12-17",
+  "score": 8,
+  "url": "https://github.com/erigontech/erigon/pull/3140"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 21871,
+  "title": "db/recsplit: use SmallSortableBuffers for bucket collector ETL (#21830)",
+  "date": "2026-06-18",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/21871"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 21781,
+  "title": "merge: less ram usage in .bt build and compression",
+  "date": "2026-06-13",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/21781"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 20635,
+  "title": "[r3.4] db/state: fix MaxStep using MinTxNum in DomainRoTx.prune",
+  "date": "2026-04-18",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/20635"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 19597,
+  "title": "`erigon snapshots check-commitment-hist-at-blk-range`: prevent check blocks beyond state",
+  "date": "2026-03-04",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/19597"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 18795,
+  "title": "mdbx: env variables to disable fsync",
+  "date": "2026-01-25",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/18795"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 18740,
+  "title": "PageLevelCompression: move compression from .Add() method to .Compress()",
+  "date": "2026-01-21",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/18740"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 17625,
+  "title": "Test_BtreeIndex_Seek2 and TestSharedDomain_CommitmentKeyReplacement speedup",
+  "date": "2025-10-24",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/17625"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 14780,
+  "title": "[r30] history: page-level compression support",
+  "date": "2025-04-28",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/14780"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 14608,
+  "title": "history: set special compress params for commitment compress",
+  "date": "2025-04-15",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/14608"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 11712,
+  "title": "compression of storage.kv",
+  "date": "2024-08-22",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/11712"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 10293,
+  "title": "recsplit: allow pass NoFsync flag as config field ",
+  "date": "2024-05-13",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/10293"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 9175,
+  "title": "e35: mdbx - to hard-limit dirty pages",
+  "date": "2024-01-09",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/9175"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 9036,
+  "title": "db migration: if stage_snapshots > 0, then\u00a0create prohibit_new_downloads.lock file",
+  "date": "2023-12-20",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/9036"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 8855,
+  "title": "e35: .UnwindTo - only move to blocks with commitment",
+  "date": "2023-11-29",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/8855"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 5176,
+  "title": "Erigon22: basic txNum forward/unwind",
+  "date": "2022-08-25",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/5176"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 5051,
+  "title": "erigon22: working PlainState unwind",
+  "date": "2022-08-14",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/5051"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3323,
+  "title": "Mdbx page size",
+  "date": "2022-01-22",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/3323"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 1660,
+  "title": "etl to use rwtx",
+  "date": "2021-04-02",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/1660"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 1213,
+  "title": "LMDB: don't search pages sequence in freelist if value is > X",
+  "date": "2020-10-10",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/1213"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 925,
+  "title": "add support of blocks compression to txpool stage",
+  "date": "2020-08-15",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/925"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 859,
+  "title": "stage3 block compression support",
+  "date": "2020-08-02",
+  "score": 7,
+  "url": "https://github.com/erigontech/erigon/pull/859"
+ },
+ {
+  "repo": "erigontech/mdbx-go",
+  "number": 59,
+  "title": "fix for https://github.com/erthink/libmdbx/commit/d522069080a2aeb996c6442d74ad08475d8280f7",
+  "date": "2022-03-27",
+  "score": 7,
+  "url": "https://github.com/erigontech/mdbx-go/pull/59"
+ },
+ {
+  "repo": "ledgerwatch/erigon-lib",
+  "number": 355,
+  "title": "add emptyWordsCount field to .seg file header (breaking .seg format)",
+  "date": "2022-03-07",
+  "score": 7,
+  "url": "https://github.com/ledgerwatch/erigon-lib/pull/355"
+ },
+ {
+  "repo": "ledgerwatch/erigon-lib",
+  "number": 234,
+  "title": "ParallelCompressor class, DecompressedFile class ",
+  "date": "2022-01-15",
+  "score": 7,
+  "url": "https://github.com/ledgerwatch/erigon-lib/pull/234"
+ },
+ {
+  "repo": "ledgerwatch/erigon-lib",
+  "number": 223,
+  "title": "Parallel compression",
+  "date": "2022-01-06",
+  "score": 7,
+  "url": "https://github.com/ledgerwatch/erigon-lib/pull/223"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 21780,
+  "title": "db/state/statecfg: bump commitment domain kv/kvi to v2.1",
+  "date": "2026-06-13",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/21780"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 20958,
+  "title": "db/state: take commitment.domain existence filter in-mem",
+  "date": "2026-05-03",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/20958"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 20640,
+  "title": "recsplit: off-heap EliasFano build",
+  "date": "2026-04-18",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/20640"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 20566,
+  "title": "db/recsplit/eliasfano32: fix searchUpperReverse off-by-one on no-solution fast path",
+  "date": "2026-04-15",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/20566"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 20323,
+  "title": "recsplit: use same etl pool with other system",
+  "date": "2026-04-04",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/20323"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 19443,
+  "title": "seg: if word-level compression disabled. don't create `.idt` file",
+  "date": "2026-02-24",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/19443"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 19440,
+  "title": "Revert \"[SharovBot] fix(history): correct .vi index page offset for V1 paged snapshot files\"",
+  "date": "2026-02-24",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/19440"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 19196,
+  "title": "compressor and recsplit: native timings support",
+  "date": "2026-02-15",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/19196"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 19195,
+  "title": "[wip] compressor and recsplit: global workers limit",
+  "date": "2026-02-15",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/19195"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 19191,
+  "title": "compression: replace C `sais` lib by Golang stdlib's one",
+  "date": "2026-02-15",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/19191"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 18490,
+  "title": "rm `condense` feature from decompressor",
+  "date": "2025-12-29",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/18490"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 17542,
+  "title": "bench: decompressor heap-alloc vs buf-reuse",
+  "date": "2025-10-20",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/17542"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 16282,
+  "title": "[r32] recsplit:\u00a0backward compatibility ",
+  "date": "2025-07-25",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/16282"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 16281,
+  "title": "[r3.1] recsplit: backward compatibility fix",
+  "date": "2025-07-25",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/16281"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 16110,
+  "title": "prune: switch back to commit with fsync",
+  "date": "2025-07-15",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/16110"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 15986,
+  "title": "recsplit: fix smal idx backward compatibility",
+  "date": "2025-07-08",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/15986"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 15960,
+  "title": "recsplit: internal existence filter based on `fuse_filter`. only `.efi` and `.kvi` files",
+  "date": "2025-07-07",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/15960"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 15858,
+  "title": "BenchmarkDecompress: on 0.5mb words",
+  "date": "2025-07-01",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/15858"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 15098,
+  "title": "package `resetstate` to not import `stagedsync` package",
+  "date": "2025-05-17",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/15098"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 14768,
+  "title": "blocks retire: to use core rlp package instead of txpool's one",
+  "date": "2025-04-26",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/14768"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 14604,
+  "title": "hist: values snappy compression",
+  "date": "2025-04-15",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/14604"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 13654,
+  "title": "TxLookup stage: allow TxNum=0",
+  "date": "2025-02-01",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/13654"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 13276,
+  "title": "commitment domain: make `.kvi` default index",
+  "date": "2024-12-30",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/13276"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 12951,
+  "title": "d_lru: to store decompressed values",
+  "date": "2024-12-02",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/12951"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 11688,
+  "title": "missed compression flags ",
+  "date": "2024-08-20",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/11688"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 10620,
+  "title": "protect stage_headers/bodies/senders/txnlookup from unwind behind files",
+  "date": "2024-06-05",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/10620"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 9781,
+  "title": "e35: commit prune batch - to allow pages in FreeList re-use by next prune batch",
+  "date": "2024-03-22",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/9781"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 8606,
+  "title": "\"erigon snapshots retire\": prune, then retire, then prune",
+  "date": "2023-10-28",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/8606"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 7713,
+  "title": "StagedSync: fix canRunCycleInOneTransaction logic. User can see partial-writes ",
+  "date": "2023-06-12",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/7713"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 7607,
+  "title": " snapshots: DumpBodies - break dependency on body.BaseTxNum value in db",
+  "date": "2023-05-31",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/7607"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 7228,
+  "title": "stricter protection against bad dict in decompressor",
+  "date": "2023-03-31",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/7228"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 6825,
+  "title": "Downloader: \"incomplete\" markers are more important than \"complete\", so commit them with fsync ",
+  "date": "2023-02-10",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/6825"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 6812,
+  "title": "less logs about compression",
+  "date": "2023-02-09",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/6812"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 6231,
+  "title": "mdbx: expose dirtySpace option",
+  "date": "2022-12-07",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/6231"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 6222,
+  "title": "Exec new blocks in TxnNoSync. Prune after sending notifications in TxnSync",
+  "date": "2022-12-07",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/6222"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 5853,
+  "title": "add DECOMPRESS_CONDENSITY env variable",
+  "date": "2022-10-24",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/5853"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 5804,
+  "title": "add fileName to decompressor panic",
+  "date": "2022-10-20",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/5804"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 5392,
+  "title": "remove libmdbx git-submodule, make db-tools work on vendored to mdbx-go .c code (after \"make dist\")",
+  "date": "2022-09-16",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/5392"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 5130,
+  "title": "compress: implemented consensed huffman pattern tables #536",
+  "date": "2022-08-22",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/5130"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 4882,
+  "title": "decompress: catch maxDepth underflow",
+  "date": "2022-08-01",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/4882"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 4536,
+  "title": "Compress: reduce etl buffers to save RAM #4535",
+  "date": "2022-06-25",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/4536"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 4176,
+  "title": "Decompress: to use less ram",
+  "date": "2022-05-17",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/4176"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3971,
+  "title": "Snapshots: allow stage_headers --unwind behind available snapshots",
+  "date": "2022-04-26",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/3971"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3894,
+  "title": "Change libmdbx submodule origin ",
+  "date": "2022-04-15",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/3894"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3650,
+  "title": "set libmdbx submodule to v0.11.5",
+  "date": "2022-03-05",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/3650"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3558,
+  "title": "block snapshots merge",
+  "date": "2022-02-21",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/3558"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3395,
+  "title": "Decompressor.WithReadAhead",
+  "date": "2022-02-01",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/3395"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3286,
+  "title": "Snapshots: parallel compressor to allow empty words",
+  "date": "2022-01-18",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/3286"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 3225,
+  "title": "Decompressor: fast Count() method",
+  "date": "2022-01-09",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/3225"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 2199,
+  "title": "switch to mdbx-go module, and db-tools to libmdbx submodule",
+  "date": "2021-06-19",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/2199"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 2066,
+  "title": "rpcdaemon: --http.compression flag (default: true)",
+  "date": "2021-05-31",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/2066"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 1897,
+  "title": "move staged sync to tx",
+  "date": "2021-05-07",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/1897"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 1806,
+  "title": "exec unwind etl",
+  "date": "2021-04-26",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/1806"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 1727,
+  "title": "[merge after release] Move history stage to rwtx",
+  "date": "2021-04-15",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/1727"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 1726,
+  "title": "[merge after release] move ih stage to rwtx",
+  "date": "2021-04-15",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/1726"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 1692,
+  "title": "[merge after release] remove etl onLoadCommit hook, because etl doesn't manage transactions anymore (it's low-level code)",
+  "date": "2021-04-08",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/1692"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 1515,
+  "title": "mdbx: same dirty list size as lmdb",
+  "date": "2021-02-25",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/1515"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 1453,
+  "title": "remove blocks compression",
+  "date": "2021-01-24",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/1453"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 723,
+  "title": "TxLookup unwind: Remove entries for blocks between unwindPoint+1 and stage.BlockNumber",
+  "date": "2020-07-08",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/723"
+ },
+ {
+  "repo": "erigontech/erigon",
+  "number": 380,
+  "title": "Run CI on bolt with prefix_compression_without_allocation (fixes)",
+  "date": "2020-02-22",
+  "score": 6,
+  "url": "https://github.com/erigontech/erigon/pull/380"
+ },
+ {
+  "repo": "ledgerwatch/bolt",
+  "number": 11,
+  "title": "invert logic of keyPrefixCompression flag",
+  "date": "2020-01-10",
+  "score": 6,
+  "url": "https://github.com/ledgerwatch/bolt/pull/11"
+ },
+ {
+  "repo": "ledgerwatch/bolt",
+  "number": 2,
+  "title": "Optional key prefix compression",
+  "date": "2019-12-24",
+  "score": 6,
+  "url": "https://github.com/ledgerwatch/bolt/pull/2"
+ },
+ {
+  "repo": "ledgerwatch/erigon-lib",
+  "number": 770,
+  "title": "mdbx: dirtySpace option expose",
+  "date": "2022-12-07",
+  "score": 6,
+  "url": "https://github.com/ledgerwatch/erigon-lib/pull/770"
+ },
+ {
+  "repo": "ledgerwatch/erigon-lib",
+  "number": 582,
+  "title": "mdbx: expose growth step",
+  "date": "2022-08-12",
+  "score": 6,
+  "url": "https://github.com/ledgerwatch/erigon-lib/pull/582"
+ },
+ {
+  "repo": "ledgerwatch/erigon-lib",
+  "number": 502,
+  "title": "Compress: reduce etl buffers to save RAM",
+  "date": "2022-06-25",
+  "score": 6,
+  "url": "https://github.com/ledgerwatch/erigon-lib/pull/502"
+ },
+ {
+  "repo": "ledgerwatch/erigon-lib",
+  "number": 474,
+  "title": "recsplit: configurable etl limit",
+  "date": "2022-05-30",
+  "score": 6,
+  "url": "https://github.com/ledgerwatch/erigon-lib/pull/474"
+ },
+ {
+  "repo": "ledgerwatch/erigon-lib",
+  "number": 307,
+  "title": "Less alloc etl recsplit",
+  "date": "2022-02-09",
+  "score": 6,
+  "url": "https://github.com/ledgerwatch/erigon-lib/pull/307"
+ },
+ {
+  "repo": "ledgerwatch/erigon-lib",
+  "number": 220,
+  "title": "Decompressor internal file path getter",
+  "date": "2021-12-31",
+  "score": 6,
+  "url": "https://github.com/ledgerwatch/erigon-lib/pull/220"
+ }
+]
