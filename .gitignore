@@ -1,0 +1,16 @@
+# Hugo build output
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Hugo / Dart Sass
+/.dart-sass/
+
+# OS / editor cruft
+.DS_Store
+*.swp
+*~
+
+# IDE
+/.idea/
+/.vscode/
