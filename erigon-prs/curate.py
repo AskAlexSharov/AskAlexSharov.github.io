@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Curate 'important' PRs (deep technical decisions) from the fetched JSONL dumps.
 
-Signal is the PR title + labels (we can't read 10k bodies). Strategy:
+Signal is the PR title (we can't read 10k bodies). Strategy:
   - STRONG keywords (unambiguous DB/storage/algorithm terms) qualify a PR alone.
   - WEAK keywords (common Erigon words) need >=2 hits, or 1 weak + 1 strong.
   - NOISE titles (dep bumps, CI, typos, releases) are dropped unless a STRONG hit.
 Output: a grouped, deduped, committable markdown of the important PRs.
 """
-import json, re, sys, os, glob
+import json, re, os
 from collections import defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -70,7 +70,7 @@ NOISE = re.compile(
 )
 
 
-def classify(title, labels):
+def classify(title):
     t = " " + title.lower() + " "
     strong_hits, weak_hits, topics = [], [], []
     for group, (strong, weak) in GROUPS.items():
@@ -113,12 +113,10 @@ def main():
             merged[key]["relations"] = set()
         merged[key]["relations"].add(r.get("relation", ""))
 
-    important = []
+    # Classify once per PR; reuse for both the markdown and the CSV below.
     for r in merged.values():
-        keep, score, topics, hits = classify(r["title"], r.get("labels", []))
-        if keep:
-            r["score"], r["topics"], r["hits"] = score, topics, hits
-            important.append(r)
+        r["keep"], r["score"], r["topics"], r["hits"] = classify(r["title"])
+    important = [r for r in merged.values() if r["keep"]]
 
     # Primary topic = first matched group, by GROUPS order.
     order = list(GROUPS.keys())
@@ -137,7 +135,7 @@ def main():
         f"**{len(important)}** flagged as deep technical decisions "
         "(algorithms, disk/database formats, isolation, DB guarantees).",
         "",
-        "> Heuristic curation from PR titles + labels — refine freely. "
+        "> Heuristic curation from PR titles — refine freely. "
         "Each PR is a candidate seed for a `pr_highligh`-tagged blog post.",
         "",
     ]
@@ -172,12 +170,11 @@ def main():
         w.writerow(["repo", "number", "title", "state", "merged", "created_at",
                     "relations", "url", "important", "score", "topics"])
         for r in sorted(merged.values(), key=lambda r: (r["repo"], -r["number"])):
-            keep, score, topics, _ = classify(r["title"], r.get("labels", []))
             w.writerow([
                 r["repo"], r["number"], r["title"], r.get("state", ""),
                 r.get("merged", ""), (r.get("created_at") or "")[:10],
                 "+".join(sorted(x for x in r["relations"] if x)), r["url"],
-                int(keep), score, "; ".join(topics),
+                int(r["keep"]), r["score"], "; ".join(r["topics"]),
             ])
 
     print(f"unique PRs: {total_all}")

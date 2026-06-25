@@ -8,7 +8,6 @@ set -u
 USER_LOGIN="AskAlexSharov"
 ORGS=("erigontech" "ledgerwatch")
 YEARS=(2019 2020 2021 2022 2023 2024 2025 2026)
-OUT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 QUERY='query($q:String!,$cursor:String){search(query:$q,type:ISSUE,first:100,after:$cursor){issueCount pageInfo{hasNextPage endCursor} nodes{... on PullRequest{number title url state merged createdAt repository{nameWithOwner} labels(first:8){nodes{name}}}}}}'
 
@@ -24,8 +23,15 @@ fetch_bucket() { # kind org from to out
     else
       resp=$(gh api graphql -f query="$QUERY" -f q="$q" -f cursor="$cursor" 2>/dev/null)
     fi
+    # Retry (don't silently truncate the bucket) on a GraphQL error OR on an
+    # empty/garbled response from a transient HTTP failure — both lack usable
+    # `.data.search`. A genuine 0-result bucket still has `.data.search`.
     if echo "$resp" | jq -e '.errors' >/dev/null 2>&1; then
       echo "    ERROR $org $from: $(echo "$resp" | jq -c '.errors' 2>/dev/null)" >&2
+      sleep 3; continue
+    fi
+    if ! echo "$resp" | jq -e '.data.search' >/dev/null 2>&1; then
+      echo "    retry $org $kind $from (empty/bad response)" >&2
       sleep 3; continue
     fi
     echo "$resp" | jq -c --arg kind "$kind" '

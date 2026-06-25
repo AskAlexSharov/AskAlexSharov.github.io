@@ -123,6 +123,21 @@ across the `erigontech` / `ledgerwatch` orgs, back to 2019.
   *Angle: "An array-based EVM stack."*
 - [`#20372`](https://github.com/erigontech/erigon/pull/20372) index-based range over log topics (avoid copying 32-byte `common.Hash` each iteration) · see also `#21858` (typed-tx `Hash()` allocs, §2).
 
+## 15. Measured performance wins (with benchmarks)
+
+PRs that ship with before/after numbers in the description — ready-made blog material.
+
+- ⭐ [`erigon#19788`](https://github.com/erigontech/erigon/pull/19788) · 2026 — **Interpolation search over Elias-Fano `Seek`** (binary search is poor on a logarithmically-distributed array): **2.2×–7.5× faster** — e.g. n=100k → `354 ns → 47 ns` (7.5×), n=1000 → `200 ns → 46 ns` (4.3×).
+  *Angle: "Interpolation search over Elias-Fano: 7× faster Seek."*
+- ⭐ [`erigon#19605`](https://github.com/erigontech/erigon/pull/19605) · 2026 — **k-way merge micro-architecture in `HistoryRange`**: `heap.Fix` instead of `heap.Pop`+`heap.Push` (−10%), and drop the per-key `SegReaderWrapper` heap allocation (**−19% allocations**).
+  *Angle: "k-way merge micro-opts: heap.Fix and killing per-key allocations."*
+- ⭐ [`erigon#17542`](https://github.com/erigontech/erigon/pull/17542) · 2025 — **Decompressor buffer-reuse vs heap-alloc**: `0 B/op, 0 allocs/op` vs `31 KB, 3000 allocs/op`, ~10% faster (`114,715` vs `129,304` ns/op, M4 Max).
+- ⭐ [`erigon#21553`](https://github.com/erigontech/erigon/pull/21553) · 2026 — **4 KB MDBX page size**: **1.7× faster flush** on Bloatnet (chaindata now fits in RAM, freelist pressure gone).
+- ⭐ [`erigon#20114`](https://github.com/erigontech/erigon/pull/20114) · 2026 — **Zero-alloc keccak for `[]byte`**: a `Sum256()` fast-path avoids the `sha.Read(h[:])` heap escape in `rlpHash`.
+- [`#288`](https://github.com/erigontech/erigon/pull/288) · 2019 — serialization bench: `encoder.Encode(&k)` `388 ns/op @ 0 B/op` vs `encodeKeyValue()` `739 ns/op @ 824 B/op` · [`#21785`](https://github.com/erigontech/erigon/pull/21785) `.bt` build: 7% of time was file writes from a too-small buffer · [`#14903`](https://github.com/erigontech/erigon/pull/14903) torrent slots: throughput holds ~1 Gb/s while `sys` memory drops `20 GB → 8 GB` (eth-mainnet).
+
+See also bench-backed wins already listed above: `#19780` (zero-copy ETL, §3), `#21858` (typed-tx `Hash()` allocs, §2), `#20567` (key-only B-tree warmup, §5).
+
 ---
 
 ### Suggested first posts (highest-impact ⭐)
@@ -133,3 +148,4 @@ across the `erigontech` / `ledgerwatch` orgs, back to 2019.
 4. **`#19191`** — replacing C with Go's suffixarray in the compressor.
 5. **`#8176` + `#8346`** — distributing a multi-TB chain over BitTorrent + web seeds.
 6. **`#5176`** — the txNum state model (Erigon3's core idea).
+7. **`#19788`** — interpolation search over Elias-Fano: a 7× faster `Seek`, with the benchmark table.

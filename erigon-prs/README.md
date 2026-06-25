@@ -16,7 +16,7 @@ technical-deep-dive highlights in [`../docs/features/pr_highlights.md`](../docs/
 
 ## Scripts (reproduce)
 - `gql_fetch.sh <author|reviewed-by> <out.jsonl>` — fetch via the GitHub GraphQL API (year buckets, quarter sub-buckets when a year exceeds the 1000-result cap).
-- `curate.py` — dedup authored+reviewed, score titles/labels by technical-topic keywords (strong terms qualify alone; common terms need pairing; dep-bumps/CI/typos excluded), emit `important_prs.md` + `all_prs.csv`.
+- `curate.py` — dedup authored+reviewed, score titles by technical-topic keywords (strong terms qualify alone; common terms need pairing; dep-bumps/CI/typos excluded), emit `important_prs.md` + `all_prs.csv`.
 - `fetch_bodies.sh` — fetch PR bodies + diffstats for `shortlist.json` → `bodies.jsonl`.
 
 Method: keyword/label heuristic over titles, then manual curation of the shortlist from real PR bodies. Refine `GROUPS`/thresholds in `curate.py` and re-run.
